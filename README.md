@@ -40,3 +40,40 @@ Detailed explanation is in specs.md under the Assignment1 folder
 
 - Starter Code from Professor's repository
 - Instructions from assignment
+
+# Programming Assignment 2 – Interpreter
+
+This assignment uses Python and Lark to interpret expressions in the untyped lambda calculus. The interpreter parses each expression into an abstract syntax tree (AST), then uses normal-order evaluation to reduce it.
+
+#Features
+- Reduces the leftmost, outermost application first.
+- Reduces expressions inside lambda bodies and arguments when needed.
+- Uses capture-avoiding substitution to keep free variables from becoming bound.
+- Prints the final result to the terminal.
+
+# Running the Interpreter
+From the repository root, install Lark and open the assignment folder:
+
+- python -m pip install lark==1.1.9
+- cd Assignment2
+
+Pass a lambda expression as a command-line argument:
+
+- python interpreter.py '(\x.x) a'
+
+Expected output:
+
+- a
+
+To check reduction inside a lambda body, run:
+
+- python interpreter.py '\z.(\x.x) y'
+
+Expected output:
+
+- (\z.y)
+
+# References
+
+- lambdaC-2024 starter code
+- Programming Assignment 2 handout
