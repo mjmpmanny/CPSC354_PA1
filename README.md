@@ -45,7 +45,7 @@ Detailed explanation is in specs.md under the Assignment1 folder
 
 This assignment uses Python and Lark to interpret expressions in the untyped lambda calculus. The interpreter parses each expression into an abstract syntax tree (AST), then uses normal-order evaluation to reduce it.
 
-#Features
+# Features
 - Reduces the leftmost, outermost application first.
 - Reduces expressions inside lambda bodies and arguments when needed.
 - Uses capture-avoiding substitution to keep free variables from becoming bound.
